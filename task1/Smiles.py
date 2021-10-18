@@ -3,13 +3,13 @@ import re
 # eyes = 1   nose = 2  mouth = 2
 
 #создаем функцию проверки текста на смайлики
-def checkForSmiles(filename):
+def check_for_smiles(filename):
     pattern = re.compile(r';-{O')
-    fileToCheck = open(filename)
-    fileInString = fileToCheck.read()
-    return len(pattern.findall(fileInString))
+    file_to_check = open(filename)
+    file_in_string = file_to_check.read()
+    return len(pattern.findall(file_in_string))
 
 #Запускам пять тестов для проверки написанной функциий
 for i in range(1,6):
-    currentTest = 'test' + str(i) + '.txt'
-    print(checkForSmiles(currentTest))
+    current_test = 'test' + str(i) + '.txt'
+    print(check_for_smiles(current_test))
